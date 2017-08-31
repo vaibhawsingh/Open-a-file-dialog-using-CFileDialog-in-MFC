@@ -28,8 +28,6 @@ if( fileDlg.DoModal ()==IDOK )//opens a file
 	{
 		CString m_strPathname = fileDlg.GetPathName();//fetch the file from dialog along with path
 
-
-
-		ofstream writeToFile(m_strPathname/*"..//RtkPostOption.ini"*/);//open file for writing
-		writeToFile <<"posMode		"<<m_PosModeCtrl.GetCurSel()					<<endl;//writing to the file
-		
+		ofstream writeToFile(m_strPathname/*"..//RtkPostOption.ini"*/);		//open file for writing
+		writeToFile <<"posMode		"<<m_PosModeCtrl.GetCurSel()<<endl;	//writing to the file	
+	}
